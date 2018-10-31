@@ -1,0 +1,174 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+section#bongocat {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#cam {
+    position: absolute;
+    width: 220px;
+    bottom: 30px;
+    right: 30px;
+    height: 165px;
+    box-shadow: 10px 10px 0 #000;
+}
+
+/* section#cam:before {
+    background: #000;
+    bottom: -10px;
+    height: 10px;
+    width: 100%;
+    left: -5px;
+    -webkit-transform: skewX(-45deg);
+    transform: skewX(-45deg);
+    content: '';
+}
+
+section#cam:after {
+    background: #000;
+    left: -10px;
+    height: 100%;
+    width: 10px;
+    bottom: -5px;
+    -webkit-transform: skewY(-45deg);
+    transform: skewY(-45deg);
+    content: '';
+} */
+
+section#training {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+}
+
+section#training div {
+    display: inline-block;
+}
+
+.btnBox {
+    margin-top: 35px;
+    height: 65px;
+}
+
+.buttonOption{
+    background-color: #746A97;
+}
+
+.buttonOption::before {
+    background-color: #5b517f;
+}
+
+.buttonOption::after {
+    background-color: #665b90;
+}
+
+#buttonTrain{
+    background-color: #FF8299;
+}
+
+#buttonTrain::before {
+    background-color: hsla(349, 50%, 60%, 1);
+}
+
+#buttonTrain::after {
+    background-color: hsla(349, 70%, 70%, 1);
+}
+
+#buttonStart{
+    background-color: #B4E95C;
+}
+
+#buttonStart::before {
+    background-color: #8ab346;
+}
+
+#buttonStart::after {
+    background-color: #9dcc51;
+}
+
+
+
+/* CREDITS TEACHABLE MACHINE */
+.train-button {
+    font-family: Comic Sans MS;
+    display: inline-block;
+    padding: 10px 10px;
+    color: white;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: 16px;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    white-space: pre;
+    border-radius: 0px;
+    border: none;
+    cursor: pointer;
+    margin-left: 68px;
+}
+
+.train-button::before, .train-button::after {
+    position: absolute;
+    content: "";
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.train-button:before {
+    bottom: -10px;
+    height: 10px;
+    width: 100%;
+    left: -5px;
+    -webkit-transform: skewX(-45deg);
+    transform: skewX(-45deg);
+    content: '';
+}
+
+.train-button:after {
+    left: -10px;
+    height: 100%;
+    width: 10px;
+    bottom: -5px;
+    -webkit-transform: skewY(-45deg);
+    transform: skewY(-45deg);
+    content: '';
+}
+
+.train-button:active {
+    margin-left: -6px;
+    margin-top: 6px;
+    margin-left: 128px;
+}
+
+.train-button:active::before {
+    bottom: -3px;
+    height: 3px;
+    left: -2px;
+}
+
+.train-button:active::after {
+    left: -3px;
+    width: 3px;
+    bottom: -2px;
+}
+
+video {
+    width: 100%;
+    bottom: 0px;
+    height: auto;
+}
