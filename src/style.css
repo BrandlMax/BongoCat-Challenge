@@ -152,7 +152,7 @@ section#training div {
 .train-button:active {
     margin-left: -6px;
     margin-top: 6px;
-    margin-left: 128px;
+    margin-left: 68px;
 }
 
 .train-button:active::before {

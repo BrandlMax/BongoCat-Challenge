@@ -48,7 +48,10 @@ class BongoCat {
         image(r2, 0, 0);
         image(l1, 0, 0);
 
-        bongoR.play();
+        if(!bongoR.isPlaying()){
+            bongoR.play();
+        }
+        
     }
 
     left(){
@@ -58,7 +61,9 @@ class BongoCat {
         image(r1, 0, 0);
         image(l2, 0, 0);
 
-        bongoL.play();
+        if(!bongoL.isPlaying()){
+            bongoL.play();
+        }
     }
 
 
@@ -75,7 +80,11 @@ class BongoCat {
 
     meow(){
         this.isMeow = true
-        meow.play();
+
+        if(!meow.isPlaying()){
+            meow.play();
+        }
+
         meow.onended(() =>{
             this.isMeow = false;
         })
