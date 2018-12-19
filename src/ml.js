@@ -12,7 +12,19 @@ class MLMODEL {
         this.READY = false;
         this.PREDICTING = false;
 
+        this.DONETRAINING = false;
+
         this.DATA = [];
+
+        // DIRTY UI/UX FIX
+        this.NormalImages = document.getElementById('NormalImages');
+        this.LeftImages = document.getElementById('LeftImages');
+        this.RightImages = document.getElementById('RightImages');
+        this.MeowImages = document.getElementById('MeowImages');
+
+        this.TrainingStats = document.getElementById('TrainingStats');
+        this.TrainingBox = document.getElementById('TrainingBox');
+        this.StartBox = document.getElementById('StartBox');
     }
 
     modelReady(){
@@ -47,6 +59,13 @@ class MLMODEL {
         }
 
         console.log(this.DATA);
+
+        this.NormalImages.innerHTML = `${ (this.DATA[0] == undefined) ? '0' : this.DATA[0]} Images`;
+        this.LeftImages.innerHTML = `${ (this.DATA[1] == undefined) ? '0' : this.DATA[1]} Images`;
+        this.RightImages.innerHTML = `${ (this.DATA[2] == undefined) ? '0' : this.DATA[2]} Images`;
+        this.MeowImages.innerHTML = `${ (this.DATA[3] == undefined) ? '0' : this.DATA[3]} Images`;
+
+        this.TrainingBox.className = 'btnBox';
     }
 
     train(){
@@ -54,8 +73,11 @@ class MLMODEL {
             if (lossValue) {
                 this.LOSS = lossValue;
                 console.log('Loss: ' + this.LOSS);
+                this.TrainingStats.innerHTML = `Loss: ${this.LOSS}`;
             } else {
                 console.log('Done Training! Final Loss: ' + this.LOSS);
+                this.TrainingStats.innerHTML = `Done: ${this.LOSS}`;
+                this.StartBox.className = 'btnBox';
             }
         });
     }

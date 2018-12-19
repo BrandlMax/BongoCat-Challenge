@@ -74,6 +74,29 @@ section#training div {
     background-color: #665b90;
 }
 
+.label {
+    display: block !important;
+    font-family: Comic Sans MS;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+div#TrainingStats {
+    max-width: 80px;
+}
+
+.inactive{
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(130%);
+    opacity: 0.3;
+    cursor: no-drop !important;
+}
+
+.inactive button{
+    cursor: no-drop !important;
+}
+
+
 #buttonTrain{
     background-color: #FF8299;
 }
